@@ -1,4 +1,4 @@
-# APT Fix Script for Kali Linux (WSL or Aother)
+# APT Fix Script for Kali Linux (WSL or Another)
 
 This script is designed to reset APT (Advanced Packaging Tool) on Kali Linux, especially useful when facing issues with broken packages, locked files, or repository problems. It automates several tasks to clear cache, fix broken packages, remove locks, and update the package manager configuration.
 
