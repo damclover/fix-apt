@@ -39,9 +39,14 @@ sudo apt update --fix-missing
 
 echo "===== Importing missing GPG key for Kali repositories ====="
 curl -fsSL https://archive.kali.org/archive-key.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/kali.gpg
+wget -q -O - https://archive.kali.org/archive-key.asc | sudo tee /etc/apt/trusted.gpg.d/kali.asc
 
 echo "===== Adjusting permissions for APT lists ====="
 sudo chown -R _apt:root /var/lib/apt/lists
 sudo chmod -R 755 /var/lib/apt/lists
+
+echo "===== Best mirrors for kali ====="
+echo "deb http://kali.download/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
+echo "deb-src http://kali.download/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
 
 echo "===== APT reset successfully completed! ====="
