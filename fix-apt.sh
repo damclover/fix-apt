@@ -46,7 +46,7 @@ sudo chown -R _apt:root /var/lib/apt/lists
 sudo chmod -R 755 /var/lib/apt/lists
 
 echo "===== Best mirrors for kali ====="
-echo "deb http://kali.download/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
-echo "deb-src http://kali.download/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
+echo "deb http://kali.download/kali kali-rolling main contrib non-free non-free-firmware\ndeb-src http://kali.download/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
 
+sudo apt update && sudo apt upgrade -y
 echo "===== APT reset successfully completed! ====="
